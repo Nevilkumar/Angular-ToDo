@@ -1,0 +1,135 @@
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.title{
+    font-size: 30px;
+    margin-top: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Table */
+
+.container h1 {
+    font-size: 32px;
+    margin: 20px 0;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    font-weight: bold;
+}
+
+
+.responsive-table li {
+    border-radius: 3px;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.responsive-table .table-header {
+    background-color: #333a56;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+.responsive-table .table-row {
+    background-color: #ffffff;
+    color: black;
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    transition: all 250ms;
+}
+
+.container{
+    max-width: 60vw;
+    margin: auto;
+    margin-bottom: 50px;
+}
+.responsive-table .col-1 {
+    flex-basis: 10%;
+    align-self: center;
+}
+.responsive-table .col-2 {
+    flex-basis: 50%;
+    align-self: center;
+}
+.responsive-table .col-3{
+    flex-basis: auto;
+}
+
+.btn1{
+    text-decoration: none;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    width: 85px;
+    height: 40px;
+    cursor: pointer;
+    font-family: 'Nunito Sans', sans-serif;
+    border-radius: 4px;
+}
+.editButton{
+    background-color: #009E60;
+}
+.deleteButton{
+    margin-left: 8px;
+    background-color: #D22B2B;
+}
+
+/* end of Table*/
+
+.addTaskContainer{
+    width: 100%;
+    padding: 1rem 0;
+    padding-left: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.addTaskContainer .task-input{
+    width: 85%;
+    height: 50px;
+    /* border: 2px solid #333a56; */
+    border: 2px solid rgb(3, 116, 215);
+    font-family: 'Nunito Sans', sans-serif;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(44, 44, 44);
+    letter-spacing: 1px;
+    outline: none;
+    border-radius: 2px;
+}
+
+.addButton{
+    background-color: #009E60;
+    height: 50px;
+    width: 13%;
+    border-radius: 3px;
+}
+
+.modal-title{
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'Nunito Sans', sans-serif;
+    letter-spacing: 1px;
+}
+
+.form-control{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(44, 44, 44);
+    letter-spacing: 1px;
+}

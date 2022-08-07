@@ -1,0 +1,42 @@
+
+<div [ngClass]="'container'">
+    <div [ngClass]="'title'">Todo List</div>
+    <div [ngClass]="'addTaskContainer'">
+        <input [(ngModel)]="newTask.name" type="text" [ngClass]="'task-input'"/>
+        <button [ngClass]="'btn1 addButton'" (click)="add()">Add</button>
+    </div>
+    <ul [ngClass]="'responsive-table'" >
+        <li [ngClass]="'table-header'">
+            <div [ngClass]="'col col-1'">Id</div>
+            <div [ngClass]="'col col-2'">Name</div>
+            <div [ngClass]="'col col-3'">Actions</div>
+        </li>
+        <li [ngClass]="'table-row'" *ngFor="let task of AllTasks; index as id;">
+            <div [ngClass]="'col col-1'" data-label="Id">{{id+1}}</div>
+            <div [ngClass]="'col col-2'" data-label="Location Name">{{task.name}}</div>
+            <div [ngClass]="'col col-3'">
+                <button [ngClass]="'btn1 editButton'" data-bs-toggle="modal" data-bs-target="#staticBackdrop" (click)="changeValue(task)">Edit</button>
+                <button [ngClass]="'btn1 deleteButton'" (click)="delete(task)">Delete</button>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<!-- Modal -->
+<div [ngClass]="'modal fade'" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div [ngClass]="'modal-dialog'">
+    <div [ngClass]="'modal-content'">
+    <div [ngClass]="'modal-header'">
+        <h5 [ngClass]="'modal-title'" id="staticBackdropLabel">Edit The Task</h5>
+        <button type="button" [ngClass]="'btn-close'" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div [ngClass]="'modal-body'">
+        <input [(ngModel)]="currentEditingTaskValue" type="text" [ngClass]="'form-control'" />
+    </div>
+    <div [ngClass]="'modal-footer'">
+        <button type="button" [ngClass]="'btn1 editButton'" (click)="edit()" data-bs-dismiss="modal">Update</button>
+        <button type="button" [ngClass]="'btn1 deleteButton'" data-bs-dismiss="modal">Close</button>
+    </div>
+    </div>
+</div>
+</div>
